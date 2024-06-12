@@ -1,0 +1,76 @@
+.poster {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(245, 245, 247);
+    padding: 20px;
+}
+
+.poster-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.poster-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.poster img {
+    max-width: 100%;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+
+.technical-description {
+    flex: 1;
+    margin: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    margin-left: 80px;
+    margin-top: 80px;
+}
+
+.technical-description h2 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.technical-description p {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.technical-description h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.technical-description ul {
+    list-style: none;
+    padding: 0;
+}
+
+.technical-description li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+.feature-icon {
+    margin-right: 10px;
+    color: #ffa500;
+    font-size: 1.5em;
+}

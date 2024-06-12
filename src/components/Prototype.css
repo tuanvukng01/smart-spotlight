@@ -1,0 +1,29 @@
+.prototype {
+    /*background-color: #c0c0c0;*/
+    background-color: rgb(245, 245, 247);
+}
+
+.prototype h2 {
+    font-size: 2.5em;
+}
+
+.prototype-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+}
+
+.prototype-images img {
+    max-width: 37%;
+    margin: 10px;
+}
+
+.prototype-video {
+    margin-top: 20px;
+}
+
+.prototype-video video {
+    max-width: 100%;
+}
