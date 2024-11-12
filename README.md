@@ -1,70 +1,97 @@
-# Getting Started with Create React App
+# Smart Spotlight
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+**Smart Spotlight** is a sophisticated IoT lighting device built for those who appreciate innovative, advanced technology in their homes. Powered by an ESP32 microcontroller, this device combines intelligent lighting with motorized orientation and real-time weather functionality. **Smart Spotlight** delivers a seamless and responsive user experience, serving as a reliable weather display and an advanced "sunrise alarm" to provide a natural wake-up experience.
 
-In the project directory, you can run:
+**Website**: [Smart Spotlight](https://smart-spotlight.vercel.app/)
 
-### `npm start`
+**Images**: 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<img src="src/resource/poster.png" alt="Smart Spotlight" style="width:50%;">
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Key Features
 
-### `npm test`
+- **Field-Oriented Control (FOC) on Two-Axis Gimbal**: The spotlight is mounted on a motorized two-axis gimbal that uses FOC for precise and efficient control. This setup enables smooth movement and positioning, making it an ideal addition to smart home systems where user comfort and automation are priorities.
+- **Sunrise Alarm**: Emulating a sunrise effect, Smart Spotlight gradually brightens to help users wake up more gently compared to traditional alarms. This is achieved through custom programming on the ESP32 to control LED intensity in sync with the alarm.
+- **Weather-Based Illumination**: Integrating weather APIs, Smart Spotlight can display real-time weather information directly through light-based cues (such as color and brightness), providing users with instant insights into the day's conditions as soon as they wake up.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Technical Architecture
 
-### `npm run build`
+This project leverages advanced IoT and embedded systems concepts, including:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Embedded System (ESP32)**: The ESP32 microcontroller drives the entire system, from motor control to wireless communication. Its dual-core architecture and WiFi capabilities make it ideal for handling real-time operations and IoT connectivity.
+- **Motor Control Using FOC**: The motorized gimbal uses Field-Oriented Control, a complex method for controlling the two-axis gimbal’s BLDC motors, ensuring stable and precise spotlight movement.
+- **WiFi Connectivity**: The ESP32 connects to WiFi to fetch weather data from a cloud API, delivering real-time weather updates to the user in a visually engaging format.
+- **Custom PCB Design**: A custom PCB is designed to integrate the ESP32, motor drivers, and power management circuitry, providing a compact and efficient layout for reliable performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## User Guide
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Target Audience
 
-### `npm run eject`
+The Smart Spotlight appeals to tech enthusiasts, smart home users, and anyone interested in blending functional and engaging technology into their daily routine.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Competing Solutions
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+While smartphone apps offer similar alarm and weather functions, Smart Spotlight distinguishes itself by providing a visually immersive experience. Unlike traditional alarms, the sunrise simulation offers a natural wake-up method, and the device’s design complements modern smart home environments.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Unique Value Proposition
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Smart Spotlight is ideal for users seeking:
+- A sophisticated and non-intrusive wake-up experience.
+- A seamless blend of IoT and ambient lighting to provide immediate information on weather.
+- A novel smart home device that combines advanced motor control with intelligent lighting.
 
-## Learn More
+## Getting Started
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Requirements
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **Hardware**:
+    - ESP32 microcontroller
+    - Two BLDC motors for gimbal control
+    - Power supply (5V or 12V, depending on configuration)
+    - LEDs with programmable brightness
+    - Custom PCB (optional for integration)
+- **Software**:
+    - Arduino IDE or PlatformIO for firmware development
+    - Weather API (such as OpenWeather API) for real-time data
 
-### Code Splitting
+### Installation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/tuanvukng01/smart-spotlight.git
+   
+    cd smart-spotlight
+    ```
+   
+2.	**Configure the firmware:**
 
-### Analyzing the Bundle Size
+   •	Open the code in Arduino IDE or PlatformIO.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   •	Update WiFi credentials and Weather API key in the configuration file.
+3.	**Upload firmware:**
 
-### Making a Progressive Web App
+   •	Connect the ESP32 via USB and upload the code.
+4.	**Calibrate the gimbal:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   •	Use provided tools to calibrate the gimbal’s movement for smooth, precise control.
 
-### Advanced Configuration
+### Usage
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Once the device is configured and connected to WiFi, it will automatically:
 
-### Deployment
+•	Retrieve weather data from the cloud and adjust lighting accordingly.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+•	Activate the sunrise alarm sequence based on user-defined wake-up time settings.
 
-### `npm run build` fails to minify
+### Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open to contributions from developers and IoT enthusiasts. Please open an issue or submit a pull request for any enhancements.
+
+### License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+With Smart Spotlight, experience a new era of intelligent lighting and wake up refreshed every day.
+
